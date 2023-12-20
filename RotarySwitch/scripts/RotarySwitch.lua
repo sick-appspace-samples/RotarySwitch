@@ -27,8 +27,7 @@ Timer.setExpirationTime(gTimerHandle, 3000)
 
 --Start of Function and Event Scope---------------------------------------------
 
---Declaration of the 'main' function as an entry point for the event loop
---@main()
+---Declaration of the 'main' function as an entry point for the event loop
 local function main()
   Timer.start(gTimerHandle)
 end
@@ -36,7 +35,6 @@ end
 --Registration of the 'main' function to the 'Engine.OnStarted' event
 Script.register('Engine.OnStarted', main)
 
---@handleOnExpired()
 local function handleOnExpired()
   local state = Switch.getState(gRotary)
   print('State of rotary switch: ' .. state)
